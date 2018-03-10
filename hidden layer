@@ -1,0 +1,20 @@
+
+#Example of forward propagation
+import numpy as np
+#input
+input_data = np.array([2,4])
+
+weight={'node_0':np.array([1,1]),
+        'node_1':np.array([2,2]),
+        'output':np.array([3,3])}
+
+node_0_value = (input_data*weight['node_0']).sum()
+node_1_value = (input_data*weight['node_1']).sum()
+
+hidden_layer = np.array([node_0_value,node_1_value])
+
+output = (hidden_layer*weight['output']).sum()
+print(output)
+                
+        
+        
